@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 api_key = os.getenv("OPENWEATHER_API_KEY")
 
-city = input("enter a city: ")
+city = input("Enter a city: ")
 url = f"http://api.openweathermap.org/geo/1.0/direct?q={city}&limit=5&appid={api_key}"
 response = requests.get(url)
 data = response.json()
