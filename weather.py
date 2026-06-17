@@ -1,10 +1,8 @@
-import os, json, requests, datetime
+import os, json, requests
 from dotenv import load_dotenv
 
 load_dotenv()
 api_key = os.getenv("OPENWEATHER_API_KEY")
-
-date = datetime.datetime.now().date()
 
 def get_weather(city):
     url = f"http://api.openweathermap.org/geo/1.0/direct?q={city}&limit=5&appid={api_key}"
@@ -38,9 +36,9 @@ def get_weather(city):
     print(f"Humidity: {humidity}%")
     print(f"Wind: {wind} mph")
     print(description.capitalize())
+    return name, temp, feels_like, humidity, wind, description
 
 
 if __name__ == "__main__":
     city = input("Enter a city: ")
     result = get_weather(city)
-    print(result)
