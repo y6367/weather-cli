@@ -81,8 +81,3 @@ This project is set up to run daily via a cron job, automatically logging weathe
 ## Database
 
 Weather data is stored locally in `data.db` (excluded from version control). The database is created automatically the first time the app runs.
-
-## Roadmap
-
-- Visualize temperature trends over time using matplotlib
-- Support tracking multiple cities
